@@ -285,6 +285,8 @@ class GraftingConfig(AbstractDataclass):
 @dataclass
 class SGDGraftingConfig(GraftingConfig):
     """Configuration for grafting from SGD."""
+    beta2: float = 0.999
+    epsilon: float = 1e-10
 
 
 @dataclass(kw_only=True)
